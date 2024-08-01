@@ -923,7 +923,10 @@ def createNewTome():
 
 
 def slugify(value):
-    value = slugify_ext(value, regex_pattern=r'[^-a-z0-9_\.]+').strip('.')
+    if options.norenaming:
+        value = value.strip('.')
+    else:
+        value = slugify_ext(value, regex_pattern=r'[^-a-z0-9_\.]+').strip('.')
     value = sub(r'0*([0-9]{4,})', r'\1', sub(r'([0-9]+)', r'0000\1', value, count=2))
     return value
 
@@ -989,6 +992,8 @@ def makeParser():
 
     processing_options.add_argument("-n", "--noprocessing", action="store_true", dest="noprocessing", default=False,
                                     help="Do not modify image and ignore any profil or processing option")
+    processing_options.add_argument("--norenaming", action="store_true", dest="norenaming", default=False,
+                                    help="Do not rename any chapters and volumes except for numbering")
     processing_options.add_argument("-u", "--upscale", action="store_true", dest="upscale", default=False,
                                     help="Resize images smaller than device's resolution")
     processing_options.add_argument("-s", "--stretch", action="store_true", dest="stretch", default=False,

@@ -188,10 +188,13 @@
        <item row="4" column="2">
         <widget class="QCheckBox" name="disableProcessingBox">
          <property name="toolTip">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Do not process any image, ignore profile and processing options&lt;/pre&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;pre style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Menlo';&quot;&gt;&lt;br/&gt;&lt;/pre&gt;&lt;pre style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Unchecked&lt;br/&gt;&lt;/span&gt;Normal processing&lt;/pre&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Indeterminate - No chapter/volume processing&lt;br/&gt;&lt;/span&gt;Do not rename chapters and volumes except for numbering&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Checked - mozJpeg&lt;br/&gt;&lt;/span&gt;Do not process any image, ignore profile and processing options&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="text">
           <string>Disable processing</string>
+         </property>
+         <property name="tristate">
+          <bool>true</bool>
          </property>
         </widget>
        </item>

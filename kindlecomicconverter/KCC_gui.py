@@ -250,8 +250,10 @@ class WorkerThread(QtCore.QThread):
             options.forcecolor = True
         if GUI.maximizeStrips.isChecked():
             options.maximizestrips = True
-        if GUI.disableProcessingBox.isChecked():
+        if GUI.disableProcessingBox.checkState() == Qt.CheckState.Checked:
             options.noprocessing = True
+        if GUI.disableProcessingBox.checkState() == Qt.CheckState.PartiallyChecked:
+            options.norenaming = True
         if GUI.deleteBox.isChecked():
             options.delete = True
         if GUI.dedupeCoverBox.isChecked():
